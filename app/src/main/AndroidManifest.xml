@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!--
+      Core permissions for an IME.
+      Microphone / overlay reserved for later voice + floating mode.
+    -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher_foreground"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_launcher_foreground"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EchoKey">
+
+        <!-- The actual Input Method Service -->
+        <service
+            android:name=".EchoKeyService"
+            android:exported="true"
+            android:permission="android.permission.BIND_INPUT_METHOD"
+            android:label="@string/ime_name">
+
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+
+        <!-- Referenced by method.xml; minimal placeholder so enabling the IME is safe. -->
+        <activity
+            android:name=".EchoKeySettingsActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.EchoKey" />
+
+    </application>
+
+</manifest>

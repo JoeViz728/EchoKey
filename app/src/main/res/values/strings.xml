@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">EchoKey</string>
+    <string name="ime_name">EchoKey</string>
+    <string name="subtype_label">English (US) - EchoKey</string>
+
+    <!-- Private mode indicator text shown in suggestions area -->
+    <string name="private_mode_indicator">Private mode — suggestions and learning disabled</string>
+</resources>

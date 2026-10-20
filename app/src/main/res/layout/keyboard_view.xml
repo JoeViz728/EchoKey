@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Minimal loveable 12-key layout.
+  Wired programmatically by EchoKeyKeyboardView.
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/keyboard_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#FF1C1C1E"
+    android:paddingTop="4dp"
+    android:paddingBottom="6dp"
+    android:paddingLeft="4dp"
+    android:paddingRight="4dp">
+
+    <!-- Suggestions / private-mode strip -->
+    <LinearLayout
+        android:id="@+id/suggestions_bar"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:layout_marginBottom="4dp"
+        android:background="#FF2C2C2E">
+
+        <TextView
+            android:id="@+id/suggestion_0"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#FFE5E5EA"
+            android:textSize="15sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <TextView
+            android:id="@+id/suggestion_1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#FFE5E5EA"
+            android:textSize="15sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <TextView
+            android:id="@+id/suggestion_2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="#FFE5E5EA"
+            android:textSize="15sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:background="?android:attr/selectableItemBackground" />
+
+        <TextView
+            android:id="@+id/mode_toggle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minWidth="52dp"
+            android:gravity="center"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:text="T9"
+            android:textStyle="bold"
+            android:textColor="#FF64D2FF"
+            android:textSize="13sp"
+            android:background="?android:attr/selectableItemBackground" />
+    </LinearLayout>
+
+    <!-- Row 1: 1 2 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+        <include layout="@layout/key_cell" android:id="@+id/key_1" />
+        <include layout="@layout/key_cell" android:id="@+id/key_2" />
+        <include layout="@layout/key_cell" android:id="@+id/key_3" />
+    </LinearLayout>
+
+    <!-- Row 2: 4 5 6 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+        <include layout="@layout/key_cell" android:id="@+id/key_4" />
+        <include layout="@layout/key_cell" android:id="@+id/key_5" />
+        <include layout="@layout/key_cell" android:id="@+id/key_6" />
+    </LinearLayout>
+
+    <!-- Row 3: 7 8 9 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+        <include layout="@layout/key_cell" android:id="@+id/key_7" />
+        <include layout="@layout/key_cell" android:id="@+id/key_8" />
+        <include layout="@layout/key_cell" android:id="@+id/key_9" />
+    </LinearLayout>
+
+    <!-- Row 4: shift · space/0 · backspace -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal">
+        <include layout="@layout/key_cell" android:id="@+id/key_shift" />
+        <include layout="@layout/key_cell" android:id="@+id/key_0" />
+        <include layout="@layout/key_cell" android:id="@+id/key_backspace" />
+    </LinearLayout>
+
+    <!-- Row 5: action (full width) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="2dp">
+        <include layout="@layout/key_cell" android:id="@+id/key_action" />
+    </LinearLayout>
+
+</LinearLayout>
